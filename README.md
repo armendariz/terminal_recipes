@@ -21,7 +21,7 @@ Intermediate stuff:
 
 And an important P.S.:
 
-Why you need to learn Git
+Why you need to learn Git:
 -Chapters 1-3 will give you a good, relatively quick overview:
 http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
