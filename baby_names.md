@@ -31,6 +31,7 @@ Smush it all together, but this time record what file each row came from.
 So kill the file we just created, then use grep to smush them back together.
 
 ```$ rm baby_names_1880_2013.txt```
+
 ```$ grep "" *.txt > baby_names_1880_2013.txt```
 
 Check out the new file.
