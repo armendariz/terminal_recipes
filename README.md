@@ -16,12 +16,12 @@ Reviewing the basics:
     * ctrl + a = move to beginning of line
     * ctrl + e = move to end of line
     * ctrl + c = stop process
-    * ps -x = detailed list or processes running)
+    * ps -x = detailed list or processes running
 
 * Basic data wrangling
     * head = looking at the first few rows of a spreadsheet
     * exporting the first few rows of a big spreadsheet
-    * wc -l = counting the total number of rows)
+    * wc -l = counting the total number of rows
     * vim = powerful if hard to learn file editor
     * egrep = powerful tool to search files
     * uniq = file inspection for obvious dupes
@@ -39,7 +39,6 @@ Intermediate stuff:
 And an important P.S.:
 
 Why you need to learn Git:
-* Chapters 1-3 will give you a good, relatively quick overview:
-    http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+* [Chapters 1-3 of the Pro Git book will give you a good, relatively quick overview](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
 Where else to get help (TK)
