@@ -15,6 +15,9 @@ Extract the data.
 
 ```$ unzip names.zip```
 
+How many rows we talkin?
+```$ wc -l *.txt```
+
 Smush it all into one file quickly.
 
 ```$ cat *.txt > baby_names_1880_2013.txt```
@@ -23,7 +26,7 @@ Check out the new file.
 
 ```$ ls```
 
-How many lines of data we got?
+How many lines of data we got in the smushed file?
 
 ```$ wc -l baby_names_1880_2013.txt```
 
