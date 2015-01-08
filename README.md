@@ -41,4 +41,8 @@ And an important P.S.:
 Why you need to learn Git:
 * [Chapters 1-3 of the Pro Git book will give you a good, relatively quick overview](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
+If you end up spending any amount of time on the terminal on a regular basis get this book:
+
+[Linux Pocket Guide, 2nd Edition](http://shop.oreilly.com/product/0636920023029.do?green=B78D23C2-6E87-58C8-BAE1-0090A206787F&intcmp=af-mybuy-0636920023029.IP)
+
 Where else to get help (TK)
