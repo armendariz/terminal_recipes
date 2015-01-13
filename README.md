@@ -23,8 +23,8 @@ Reviewing the basics:
     * exporting the first few rows of a big spreadsheet
     * wc -l = counting the total number of rows
     * vim = powerful if hard to learn file editor
-      *You'll want to know this, but we won't be able to get to the details.
-      *Your Mac comes with a good built in tutorial. Go to your terminal and type 'vimtutor'
+      * You'll want to know this, but we won't be able to get to the details.
+      * Your Mac comes with a good built in tutorial. Go to your terminal and type 'vimtutor'
     * egrep = powerful tool to search files
     * uniq = file inspection for obvious dupes
 
