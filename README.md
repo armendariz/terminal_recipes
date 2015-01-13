@@ -12,7 +12,8 @@ Reviewing the basics:
 * Navigation
     * cd = changing directories
     * ls = listing files/folders
-    * pwd = print working directory
+    * pwd = print working directory (for when you get lost)
+    * mkdir = make a new folder 
     * ctrl + a = move to beginning of line
     * ctrl + e = move to end of line
     * ctrl + c = stop process
