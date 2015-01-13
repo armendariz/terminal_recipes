@@ -7,7 +7,11 @@ Here's a quick way to do that all from the terminal. And since you're working un
 
 We're going to work with the [Baby Names from Social Security Card Applications-National Level Data](http://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data) available on Data.gov.
 
-First, grab the data from Data.gov to your machine.
+First, let's make a folder where we want to put the data we're about to download:
+
+```$ mkdir my_folder```
+
+Then grab the data from Data.gov to your machine.
 
 ```$ wget http://www.ssa.gov/oact/babynames/names.zip```
 
@@ -18,13 +22,21 @@ Extract the data.
 How many rows we talkin?
 ```$ wc -l *.txt```
 
+Check out the new files.
+
+```$ ls```
+
+Let's look at the first few rows of one.
+
+```$ head yob1880.txt```
+
+And the last few rows.
+
+```$ tail yob1880.txt```
+
 Smush it all into one file quickly.
 
 ```$ cat *.txt > baby_names_1880_2013.txt```
-
-Check out the new file.
-
-```$ ls```
 
 How many lines of data we got in the smushed file?
 
@@ -45,12 +57,26 @@ How many lines of data we got?
 
 ```$ wc -l baby_names_1880_2013.txt```
 
-Check out the first few rows.
+What do the first few rows look like?
 
 ```$ head baby_names_1880_2013.txt```
 
+Maybe we want to export one of these slices to look at in excel:
+
+```head baby_names_1880_2013.txt > baby_names_first_few_rows.csv```
+
 Okay, but what's the baby name most often given? I gotta know!
 Let's print the third column to the screen then sort it in ascending order.
+
+Since the file is large, let's do a test on a smaller batch. When you're combining two commands you use a pipe (|)
+
+```$ head baby_names_1880_2013.txt | awk -F "," '{print $3}'```
+
+And if we wanted to grab the third column from the whole file?
+
+```$ awk -F "," '{print $3}' baby_names_1880_2013.txt```
+
+And sort it too?
 
 ```$ awk -F "," '{print $3}' baby_names_1880_2013.txt | sort -n```
 
@@ -61,3 +87,8 @@ Okay, there's the biggest number, but what name is it associated with?
 Let's look at a few of the big names at once.
 
 ```$ egrep 90512\|90629\|90994\|91652\|92711\|94758\|96210\|99674 baby_names_1880_2013.txt```
+
+Ok, but at the end of the day, all I really want from this dataset is all the variations on the name Sarah.
+I'm going to filter the data just for 'Sarah' and then export it to a .csv so I'm not dealing with such a big file.
+
+```grep "Sarah" baby_names_1880_2013.txt > sarahs.csv```
