@@ -1,7 +1,7 @@
 terminal_recipes
 ================
 
-NICAR 2015 class to introduce reporters to the power of the terminal. Nothing fancy, just the fundamentals. Contributions welcome! Share your knowledge
+NICAR 2015 class to introduce reporters to the power of the terminal. Nothing fancy, just the fundamentals. Contributions welcome! Share your knowledge.
 
 This is designed to be Part 2 of a beginners' class: lightly touching on the basics and then getting into more interesting tools (fetching from the web, intermediate data wrangling, etc.)
 
@@ -17,17 +17,18 @@ Reviewing the basics:
     * ctrl + a = move to beginning of line
     * ctrl + e = move to end of line
     * ctrl + c = stop process
-    * ps -x = detailed list or processes running
 
 * Basic data wrangling
     * head = looking at the first few rows of a spreadsheet
-    * exporting the first few rows of a big spreadsheet
+    * tail = looking at the last few rows of a spreadsheet
+    * head original_filename.csv > firstfewrows.csv = exporting the first few rows of a big spreadsheet
     * wc -l = counting the total number of rows
     * vim = powerful if hard to learn file editor
       * You'll want to know this, but we won't be able to get to the details.
       * Your Mac comes with a good built in tutorial. Go to your terminal and type 'vimtutor'
     * egrep = powerful tool to search files
-    * uniq = file inspection for obvious dupes
+    * uniq = file inspection for obvious duplicate records
+      * uniq -d filename = print only duplicate repeated lines in file
 
 Intermediate stuff: 
 
