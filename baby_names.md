@@ -19,7 +19,12 @@ Extract the data.
 
 ```$ unzip names.zip```
 
-How many rows we talkin?
+How many rows we talkin in the first file?
+
+```$ wc -l yob1880.txt```
+
+How many rows we talkin in all the files in this folder?
+
 ```$ wc -l *.txt```
 
 Check out the new files.
@@ -42,10 +47,19 @@ How many lines of data we got in the smushed file?
 
 ```$ wc -l baby_names_1880_2013.txt```
 
-Smush it all together, but this time record what file each row came from.
-So kill the file we just created, then use grep to smush them back together.
+Smush it all together, but let's do it again and record what file each row came from. 
+
+So kill the file we just created.
 
 ```$ rm baby_names_1880_2013.txt```
+
+To smush it back together and record what file each row came from, we need to talk about a command called 'grep.' The grep command is to search for a specific string. When you're searching across multiple files, it has the added benefit of telling you which file it found the string in.
+
+A simple use of this command would be:
+
+```$ grep "Agustin" *.txt```
+
+Let's smush all files in our current directly that end in .txt
 
 ```$ grep "" *.txt > baby_names_1880_2013.txt```
 
@@ -66,9 +80,10 @@ Maybe we want to export one of these slices to look at in excel:
 ```head baby_names_1880_2013.txt > baby_names_first_few_rows.csv```
 
 Okay, but what's the baby name most often given? I gotta know!
-Let's print the third column to the screen then sort it in ascending order.
 
-Since the file is large, let's do a test on a smaller batch. When you're combining two commands you use a pipe (|)
+Since the file is large, let's do a test on a smaller batch. The awk command is more flexible than grep, and makes it easy to within a specific column.
+
+When you're combining two commands you use a pipe (|). Let's print the third column to the screen then sort it in ascending order. The -F "," use to tell the awk command that the file is comma-sepparated. The $3 tells it to look for the third column.
 
 ```$ head baby_names_1880_2013.txt | awk -F "," '{print $3}'```
 
@@ -76,7 +91,7 @@ And if we wanted to grab the third column from the whole file?
 
 ```$ awk -F "," '{print $3}' baby_names_1880_2013.txt```
 
-And sort it too?
+And sort it too? The -n says 'sort by numerical value,' instead of treating these numbers a text. Try it without the -n if you want to see the result.
 
 ```$ awk -F "," '{print $3}' baby_names_1880_2013.txt | sort -n```
 
@@ -87,8 +102,3 @@ Okay, there's the biggest number, but what name is it associated with?
 Let's look at a few of the big names at once.
 
 ```$ egrep 90512\|90629\|90994\|91652\|92711\|94758\|96210\|99674 baby_names_1880_2013.txt```
-
-Ok, but at the end of the day, all I really want from this dataset is all the variations on the name Sarah.
-I'm going to filter the data just for 'Sarah' and then export it to a .csv so I'm not dealing with such a big file.
-
-```grep "Sarah" baby_names_1880_2013.txt > sarahs.csv```
