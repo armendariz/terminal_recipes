@@ -11,6 +11,8 @@ Reviewing the basics:
 
 * Navigation
     * cd = changing directories
+    * cd .. = move up one directory
+      * cd ../.. = move up two directories
     * ls = listing files/folders
     * pwd = print working directory (for when you get lost)
     * mkdir = make a new folder 
