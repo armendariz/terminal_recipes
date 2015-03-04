@@ -1,10 +1,16 @@
-terminal_recipes
+Useful command line tools for reporters
 ================
+(Taught at the [NICAR 2015 conference](http://ire.org/events-and-training/event/1494/))
 
-NICAR 2015 class to introduce reporters to the power of the terminal. Nothing fancy, just the fundamentals. Contributions welcome! Share your knowledge.
+Ever had a CSV file too large to open in Excel?  Ever had one so big it crashed your computer? We’ll show you some simple tricks for wrangling data on the command line. If you've never programmed before but frequently use Excel and SQL, this class will make your life better. Bonus: We’ll show you how to make your Mac recite poetry for you.
 
-This is designed to be Part 2 of a beginners' class: lightly touching on the basics and then getting into more interesting tools (fetching from the web, intermediate data wrangling, etc.)
+This is designed to be Part 2 of a beginners' class: lightly touching on the basics and then getting into more interesting tools (fetching from the web, intermediate data wrangling, etc.) 
 
+It will be taught on Macs. If you're a Windows user, this class could still be helpful. It will show you what's possible on command line. Other resources you may want to check out:
+
+*Matt Kiefer is doing a command line tools class in Windows using Cygwin on Friday morning.
+*Use terminal through a virtual machine. Check out this from the [Center for Investigative Reporting](https://github.com/cirlabs/vm)
+*Liz Lucas is teaching an introductory class on command line for Windows: http://ire.org/events-and-training/event/1494/1621/
 Possible areas this course will cover:
 
 Reviewing the basics:
