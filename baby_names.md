@@ -11,9 +11,10 @@ First, let's make a folder where we want to put the data we're about to download
 
 ```$ mkdir my_folder```
 
-Then grab the data from Data.gov to your machine.
+Then grab the data from Data.gov to your machine. 
 
 ```$ wget http://www.ssa.gov/oact/babynames/names.zip```
+(A quick footnote: wget is not installed on your machine by default. You may need to install it on your personal computer)
 
 Extract the data.
 
