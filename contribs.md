@@ -16,7 +16,7 @@ Looks like we'll have to clean up the date and amount fields for them to be vali
 
 There's a very useful set of tools for working with data that come as part of the [csvkit](https://csvkit.readthedocs.org/en/0.9.0/) package maintained by Christopher Groskopf.
 
-You'll need to install it yourself but it's well worth your time and effort to get it up and running.
+You'll need to [install](http://csvkit.readthedocs.org/en/latest/install.html) it yourself but it's well worth your time and effort to get it up and running.
 
 There's a utility called in2csv that is part of the package and it's great at cleaning up things like date fields. Take a look.
 
@@ -24,7 +24,7 @@ There's a utility called in2csv that is part of the package and it's great at cl
 
 in2csv cleans up the dates great, but we'll need to clean up the amounts ourselves.
 
-Something like this should work. We use the sed utility to search for dollar signs and commas and replace them with nothing.
+Something like this should work. We use the sed utility to search for dollar signs and commas and replace them with nothing. (Don't worry too much about the syntax we use with the sed command right now. It's easy to pick up if you decide it'll be helpful).
 
 ```cut -f9,10,11 data/contribs.csv | sed 's/[\$,\,,\)]//g'```
 
