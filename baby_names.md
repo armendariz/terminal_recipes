@@ -83,9 +83,8 @@ Okay, but what's the baby name most often given? I gotta know!
 
 Since the file is large, let's do a test on a smaller batch. The awk command is more flexible than grep, and makes it easy to within a specific column.
 
-When you're combining two commands you use a pipe (|). Let's print the third column to the screen then sort it in ascending order. The -F "," use to tell the awk command that the file is comma-sepparated. The $3 tells it to look for the third column.
+When you're combining two commands you use a pipe (|). Let's print the third column to the screen then sort it in ascending order. The -d, tells the cut command that the file is comma-sepparated. The -f3 tells it to look for the third column.
 
-```$ head baby_names_1880_2013.txt | awk -F "," '{print $3}'```
 ```$head baby_names_1880_2013.txt | cut -d, -f3```
 
 And if we wanted to grab the third column from the whole file?
@@ -94,7 +93,6 @@ And if we wanted to grab the third column from the whole file?
 
 And sort it too? The -n says 'sort by numerical value,' instead of treating these numbers a text. Try it without the -n if you want to see the result.
 
-```$ awk -F "," '{print $3}' baby_names_1880_2013.txt | sort -n```
 ```cut -d, -f3 baby_names_1880_2013.txt | sort -n```
 
 Okay, there's the biggest number, but what name is it associated with?
