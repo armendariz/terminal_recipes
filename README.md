@@ -8,9 +8,9 @@ This is designed to be Part 2 of a beginners' class: lightly touching on the bas
 
 It will be taught on Macs. If you're a Windows user, this class could still be helpful. It will show you what's possible on command line. Other resources you may want to check out:
 
-*Matt Kiefer is doing a command line tools class in Windows using Cygwin on Friday morning.
-*Use terminal through a virtual machine. Check out this from the [Center for Investigative Reporting](https://github.com/cirlabs/vm)
-*Liz Lucas is teaching an introductory class on command line for Windows: http://ire.org/events-and-training/event/1494/1621/
+* Matt Kiefer is doing a command line tools class in Windows using Cygwin on Friday morning.
+* Use terminal through a virtual machine. Check out this from the [Center for Investigative Reporting](https://github.com/cirlabs/vm)
+* Liz Lucas is teaching an introductory class on command line for Windows: http://ire.org/events-and-training/event/1494/1621/
 Possible areas this course will cover:
 
 Reviewing the basics:
