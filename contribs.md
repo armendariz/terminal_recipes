@@ -74,7 +74,7 @@ We'll query the master table list to see if our table is indeed there.
 
 How many records got inserted?
 
-```sqlite> SELECT COUNT(*) FROM contribs```
+```sqlite> SELECT COUNT(*) FROM contribs;```
 
 How much money we talkin?
 
@@ -88,9 +88,13 @@ There are [lots of other useful tools](https://source.opennews.org/en-US/article
 
 Execute sql queries directly on a file to limit and export a limited slice just for your state
 
-```csvsql --query "SELECT * FROM contribs WHERE STATE = 'GA'" contribs.csv > contribs_ga.csv```
+```csvsql --query "SELECT * FROM contribs WHERE STATE = 'GA'" data/contribs.csv > contribs_ga.csv```
+
+Check it out.
+
+```$ cat contribs_ga.csv```
 
 Get summary statistics
 
-```csvstat contribs.csv```
+```csvstat data/contribs.csv```
 
