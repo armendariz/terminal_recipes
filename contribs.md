@@ -38,19 +38,19 @@ Looks pretty good to me. Let's string it all together to get a clean csv for imp
 
 Now let's shove it all into a sqlite database. Another cool csvkit tool is csvsql. Let's use that to write our create table statement in the sqlite dialect of sql.
 
-```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs -i sqlite --table contribs```
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql -i sqlite --table contribs```
 
 Better yet, let's create the table and insert the data too using csvsql. 
 
-```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs -i sqlite --table contribs --db sqlite:///contribs.sqlite --insert```
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --table contribs --db sqlite:///contribs.sqlite```
 
 Can you guess which part of the command we need to take out based on the error?
 
 Instead, try:
 
-```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --table contribs --db sqlite:///contribs.sqlite --insert```
 
-Oops, looks like we need to delete the contribs table first.
+If the table already exists then we need to delete the contribs table first.
 
 ```sqlite3 contribs.sqlite```
 
@@ -64,7 +64,7 @@ To get out of the sqlite3 shell
 
 Now this should work:
 
-```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --table contribs --db sqlite:///contribs.sqlite --insert```
 
 We'll query the master table list to see if our table is indeed there.
 
