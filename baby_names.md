@@ -39,7 +39,7 @@ And the last few rows.
 
 ```$ tail yob1880.txt```
 
-Smush it all into one file quickly.
+Smush it all into one file quickly. We use the 'cat' command to read all the files in our folder ending in .txt and then send the output to a new file. (Here's a [more detailed explanation](http://www.linfo.org/cat.html))
 
 ```$ cat *.txt > baby_names_1880_2013.txt```
 
