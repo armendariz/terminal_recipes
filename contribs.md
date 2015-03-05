@@ -50,9 +50,24 @@ Instead, try:
 
 ```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
 
+Oops, looks like we need to delete the contribs table first.
+
+```sqlite3 contribs.sqlite```
+
+
 Let's check it out.
 
 ```sqlite3 contribs.sqlite```
+```sqlite> DROP TABLE contribs;```
+```sqlite> SELECT * FROM contribs;```
+
+To get out of the sqlite3 shell
+
+```sqlite> .exit``
+
+Now this should work:
+
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
 
 We'll query the master table list to see if our table is indeed there.
 
@@ -66,6 +81,6 @@ How much money we talkin?
 
 ```sqlite> SELECT SUM(Amount) FROM contribs;```
 
-To get out of the sqlite3 shell
+And remember, to get out of the sqlite3 shell
 
 ```sqlite> .exit```
