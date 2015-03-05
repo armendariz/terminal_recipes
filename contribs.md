@@ -42,7 +42,7 @@ Now let's shove it all into a sqlite database. Another cool csvkit tool is csvsq
 
 Better yet, let's create the table and insert the data too using csvsql. 
 
-```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --table contribs --db sqlite:///contribs.sqlite```
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql -i sqlite --table contribs --db sqlite:///contribs.sqlite```
 
 Can you guess which part of the command we need to take out based on the error?
 
