@@ -11,6 +11,10 @@ First, let's make a folder where we want to put the data we're about to download
 
 ```$ mkdir my_folder```
 
+Move into that folder.
+
+```$ cd my_folder```
+
 Then grab the data from Data.gov to your machine. (A quick footnote: wget is not installed on your machine by default. You may need to install it on your personal computer)
 
 ```$ wget http://www.ssa.gov/oact/babynames/names.zip```
@@ -57,7 +61,7 @@ To smush it back together and record what file each row came from, we need to ta
 
 A simple use of this command would be:
 
-```$ grep "Agustin" *.txt```
+```$ grep "A*gustin" *.txt```
 
 Let's smush all files in our current directly that end in .txt
 
@@ -81,11 +85,11 @@ Maybe we want to export one of these slices to look at in excel:
 
 Okay, but what's the baby name most often given? I gotta know!
 
-Since the file is large, let's do a test on a smaller batch. The awk command is more flexible than grep, and makes it easy to within a specific column.
+Since the file is large, let's do a test on a smaller batch.
 
-When you're combining two commands you use a pipe (|). Let's print the third column to the screen then sort it in ascending order. The -d, tells the cut command that the file is comma-sepparated. The -f3 tells it to look for the third column.
+When you're combining two commands you use a pipe (|). Let's print the third column to the screen. The -d, tells the cut command that the file is comma-sepparated. The -f3 tells it to look for the third column.
 
-```$head baby_names_1880_2013.txt | cut -d, -f3```
+```$ head baby_names_1880_2013.txt | cut -d, -f3```
 
 And if we wanted to grab the third column from the whole file?
 
