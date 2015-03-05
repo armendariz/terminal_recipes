@@ -54,11 +54,6 @@ Oops, looks like we need to delete the contribs table first.
 
 ```sqlite3 contribs.sqlite```
 
-
-Let's check it out.
-
-```sqlite3 contribs.sqlite```
-
 ```sqlite> DROP TABLE contribs;```
 
 ```sqlite> SELECT * FROM contribs;```
@@ -72,6 +67,8 @@ Now this should work:
 ```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
 
 We'll query the master table list to see if our table is indeed there.
+
+```sqlite3 contribs.sqlite```
 
 ```sqlite> SELECT * FROM sqlite_master;```
 
