@@ -58,7 +58,9 @@ Oops, looks like we need to delete the contribs table first.
 Let's check it out.
 
 ```sqlite3 contribs.sqlite```
+
 ```sqlite> DROP TABLE contribs;```
+
 ```sqlite> SELECT * FROM contribs;```
 
 To get out of the sqlite3 shell
