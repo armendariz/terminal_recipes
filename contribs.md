@@ -40,9 +40,15 @@ Now let's shove it all into a sqlite database. Another cool csvkit tool is csvsq
 
 ```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs -i sqlite --table contribs```
 
-Better yet, let's create the table and insert the data too using csvsql.
+Better yet, let's create the table and insert the data too using csvsql. 
 
 ```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs -i sqlite --table contribs --db sqlite:///contribs.sqlite --insert```
+
+Can you guess which part of the command we need to take out based on the error?
+
+Instead, try:
+
+```cat data/contribs.csv | sed 's/[\$,\,,\)]//g' | in2csv -f csv | csvsql --tabs --table contribs --db sqlite:///contribs.sqlite --insert```
 
 Let's check it out.
 
