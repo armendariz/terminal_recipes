@@ -83,3 +83,14 @@ How much money we talkin?
 And remember, to get out of the sqlite3 shell
 
 ```sqlite> .exit```
+
+There are [lots of other useful tools](https://source.opennews.org/en-US/articles/eleven-awesome-things-you-can-do-csvkit/) in csvkit to explore. Here are a couple examples:
+
+Execute sql queries directly on a file to limit and export a limited slice just for your state
+
+```csvsql --query "SELECT * FROM contribs WHERE STATE = 'GA'" contribs.csv > contribs_ga.csv```
+
+Get summary statistics
+
+```csvstat contribs.csv```
+
