@@ -4,7 +4,7 @@ Useful command line tools for reporters
 
 Ever had a CSV file too large to open in Excel?  Ever had one so big it crashed your computer? We’ll show you some simple tricks for wrangling data on the command line. If you've never programmed before but frequently use Excel and SQL, this class will make your life better. Bonus: We’ll show you how to make your Mac recite poetry for you.
 
-This is designed to be Part 2 of a beginners' class: lightly touching on the basics and then getting into more interesting tools (fetching from the web, intermediate data wrangling, etc.) 
+This is designed to be Part 2 of a beginners' class: lightly touching on the basics and then getting into more interesting tools (fetching from the web, intermediate data wrangling, etc.)
 
 It will be taught on Macs. If you're a Windows user, this class could still be helpful. It will show you what's possible on command line. Other resources you may want to check out:
 
@@ -22,7 +22,7 @@ Reviewing the basics:
       * cd ../.. = move up two directories
     * ls = listing files/folders
     * pwd = print working directory (for when you get lost)
-    * mkdir = make a new folder 
+    * mkdir = make a new folder
     * ctrl + a = move to beginning of line
     * ctrl + e = move to end of line
     * ctrl + c = stop process
@@ -39,7 +39,7 @@ Reviewing the basics:
     * uniq = file inspection for obvious duplicate records
       * uniq -d filename = print only duplicate repeated lines in file
 
-Intermediate stuff: 
+Intermediate stuff:
 
 * Fetch things from the interwebs
     * wget
@@ -57,3 +57,9 @@ Why you need to learn Git:
 If you end up spending any amount of time on the terminal on a regular basis get this book:
 
 [Linux Pocket Guide, 2nd Edition](http://shop.oreilly.com/product/0636920023029.do?green=B78D23C2-6E87-58C8-BAE1-0090A206787F&intcmp=af-mybuy-0636920023029.IP)
+
+Tutorials:
+
+[UNIX Tutorial](http://people.ischool.berkeley.edu/~kevin/unix-tutorial/toc.html)
+
+[Introduction to the Mac OS X Command Line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
