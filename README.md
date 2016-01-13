@@ -1,6 +1,6 @@
 Useful command line tools for reporters
 ================
-(Taught at the [NICAR 2015 conference](http://ire.org/events-and-training/event/1494/))
+(Originally taught at the [NICAR 2015 conference](http://ire.org/events-and-training/event/1494/) by Kendall Taggart & Agustin Armendariz)
 
 Ever had a CSV file too large to open in Excel?  Ever had one so big it crashed your computer? We’ll show you some simple tricks for wrangling data on the command line. If you've never programmed before but frequently use Excel and SQL, this class will make your life better. Bonus: We’ll show you how to make your Mac recite poetry for you.
 
