@@ -44,7 +44,7 @@ Intermediate stuff:
 
 * Fetch things from the interwebs
     * wget
-    * cURL
+    * cURL ($ curl wttr.in)
 
 * Intermediate data wrangling
     * csvkit
