@@ -17,7 +17,7 @@ Move into that folder.
 
 Then grab the data from Data.gov to your machine. (A quick footnote: wget is not installed on your machine by default. You may need to install it on your personal computer)
 
-```$ wget http://www.ssa.gov/oact/babynames/names.zip```
+```$ wget https://www.ssa.gov/oact/babynames/names.zip```
 
 Extract the data.
 
